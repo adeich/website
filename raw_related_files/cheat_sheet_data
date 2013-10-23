@@ -1,0 +1,90 @@
+﻿Commands I use frequently
+
+
+Vim
+
+
+Opening file from commandline
+$vim foo.txt        opens foo.txt
+$vim                opens new, unnamed file
+
+
+Quit, Write
+:q        quit
+:q!       quit without saving new changes
+:w        write
+:wq       write and quit
+
+
+Enter Insert Mode -- ‘esc’ to exit
+i        at current cursor location
+s        at next cursor location
+c        delete operator, and enter insert mode. e.g. ‘cw’, ‘cc’
+A        at end of current line
+o        create new line below and enter insert mode
+O        create new line above and enter insert mode
+
+
+Undo
+u        			equivalent to ‘command-z’ in mac/windows
+ctrl-r        negate the undo
+
+
+Enter Visual Mode -- ‘esc’ to exit
+v
+
+
+Cursor movement
+w        to end of current/next word
+b        to beginning of current/previous word
+{        to beginning of current/next paragraph
+}        to ending of current/previous paragraph
+$        to end of current line
+0        to beginning of current line
+ %        move to matching (, [, {,
+
+
+Deletion
+d        delete operator. e.g. ‘dw’, ‘d}’, ‘db’, etc
+dd       delete line
+D        delete to end of current line
+
+
+Copy to buffer
+y        copy operator
+yy       copy line
+
+
+Put from buffer
+p        place below current line
+P        place above current line
+
+
+Split Screen
+:split        horizontal split
+:vs        vertical split
+ctrl-w ctrl-w        toggle cursor between windows
+ctrl-w >        shift window border right
+ctrl-w <        shift window border left
+
+
+Open different file
+:n.
+
+
+Search
+/foo        search for foo
+n        jump to next match
+N        jump to previous match
+
+
+Replace
+:%s/foo/bar/g        replace all foo with bar
+:%s/foo/bar/gc same as above, but ask permission before each replacement
+
+
+My common settings:
+:set number        		turn on line numbers
+:syntax on        		turn on syntax hilighting
+:set tabstop=2        set tab character to appear as two-spaces wide
+:set expandtab        causes tab character insertion to actually insert space characters
